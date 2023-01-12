@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="robots" content="noindex, nofollow"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Helpdesk</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/getQuery.js"></script>
+    <script src="js/filterTableAlice.js"></script>
+    <script src="js/workThemTabs.js"></script>
+</head>
+
+<body>
+<div class="header">
+    <form method="get" action="/index.html">
+        <input type="submit" name="submit" id="submit" value="Logout">
+    </form>
+    <h2>PROTOTYPE - 21COB290</h2>
+    <h2>Make-It-All</h2>
+</div>
+<div class="form">
+    <h2>Welcome, Alice.</h2>
+</div>
+<div class="tabs" class="tab">
+    <button class="tablinks" onclick="openQuery(event, 'Open')"id="defaultOpen">Active Queries</button>
+    <button class="tablinks" onclick="openQuery(event, 'Overdue')">Overdue Queries</button>
+    <button class="tablinks" onclick="openQuery(event, 'Completed')">Completed Queries</button>
+</div>
+    <div id="Open" class="tabcontent">
+    <h3>Active Queries</h3>
+    <hr>
+    <input type="text" id="helpdeskFilter" onkeyup="filterTableAlice()" placeholder="Search for query type..">
+    <table class="output_query_table" id="helpdeskTable" width="100%">
+        <tbody>
+        <tr>
+            <th>Query No.</th>
+            <th>Description</th>
+	    <th>Problem Type</th>
+            <th>Hardware</th>
+            <th>Software</th>
+            <th>Time</th>
+            <th>Assigned to</th>
+            <th>Completed</th>
+        </tr>
+        <tr onclick="getQueryData(this,event,1)">
+            <td>325</td>
+            <td>Laptop running very slowly</td>
+	    <td>Software</td>
+            <td>HP Laptop</td>
+            <td>Windows 8</td>
+            <td>Oct 3 2016, 9.00am</td>
+            <td>Clara</td>
+            <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+        </tr>
+        <tr onclick="getQueryData(this,event,1)">
+            <td>326</td>
+            <td>Email may have been hacked when using an external server</td>
+	    <td>Software</td>
+            <td>Asus Laptop</td>
+            <td>Windows 10, Outlook 365</td>
+            <td>Oct 3 2016, 9.15am</td>
+            <td>Clara</td>
+            <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+        </tr>
+        <tr onclick="getQueryData(this,event,1)">
+            <td>327</td>
+            <td>Tendency to eject CDs early</td>
+	    <td>Hardware</td>
+            <td>CD Rom Reader on Sony Vaio VPCX13C7E Desktop,No. CNU327BHP7</td>
+            <td>All media software</td>
+            <td>Oct 4 2016, 9.20am</td>
+            <td>Bert</td>
+            <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+        </tr>
+        <tr onclick="getQueryData(this,event,1)">
+            <td>328</td>
+            <td>Concerned about the strength of the firewall. In particular wants to keep out illegal messages from Mexico.</td>
+	    <td>Software</td>
+            <td>-</td>
+            <td>Network Firewall</td>
+            <td>Oct 4 2016, 4.15am</td>
+            <td>Clara</td>
+            <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <form method="get" action="/query.php">
+        <input type="submit" name="submit" id="submit" value="Create New Query">
+    </form>
+<hr>
+</div>
+<div id="Overdue" class="tabcontent">
+    <h3>Overdue Queries</h3>
+    <hr>
+    <table class="output_query_table" width="100%">
+        <tbody>
+        <tr>
+            <th>Query No.</th>
+            <th>Description</th>
+	    <th>Problem Type</th>
+            <th>Hardware</th>
+            <th>Software</th>
+            <th>Time</th>
+            <th>Assigned to</th>
+            <th>Completed</th>
+        </tr>
+        <tr onclick="getQueryData(this,event,1)">
+            <td>325</td>
+            <td>Laptop running very slowly</td>
+	    <td>Software</td>
+            <td>HP Laptop</td>
+            <td>Windows 8</td>
+            <td>Oct 3 2016, 9.00am</td>
+            <td>Clara</td>
+            <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+        </tr>
+        <tr onclick="getQueryData(this,event,1)">
+            <td>326</td>
+            <td>Email may have been hacked when using an external server</td>
+	    <td>Software</td>
+            <td>Asus Laptop</td>
+            <td>Windows 10, Outlook 365</td>
+            <td>Oct 3 2016, 9.15am</td>
+            <td>Clara</td>
+            <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+        </tr>
+        <tr onclick="getQueryData(this,event,1)">
+            <td>327</td>
+            <td>Tendency to eject CDs early</td>
+	    <td>Hardware</td>
+            <td>CD Rom Reader on Sony Vaio VPCX13C7E Desktop,No. CNU327BHP7</td>
+            <td>All media software</td>
+            <td>Oct 4 2016, 9.20am</td>
+            <td>Bert</td>
+            <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+        </tr>
+        <tr onclick="getQueryData(this,event,1)">
+            <td>328</td>
+            <td>Concerned about the strength of the firewall. In particular wants to keep out illegal messages from Mexico.</td>
+	    <td>Software</td>
+            <td>-</td>
+            <td>Network Firewall</td>
+            <td>Oct 4 2016, 4.15am</td>
+            <td>Clara</td>
+            <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+/* =================================
+    Fonts from google fonts
+===================================*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap");
+
+/* =================================
+    Body and Reset Styles
+===================================*/
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: poppins;
+  vertical-align: baseline;
+}
+
+/* =================================
+    Header
+===================================*/
+.header {
+  padding: 1em 3em;
+  font-family: montserrat;
+  background: #095f9c;
+  color: #fff;
+}
+
+/* =================================
+    Forms
+===================================*/
+.form {
+  padding: 2em 3em;
+}
+
+.form input {
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 3px;
+  border: 1px solid #000;
+  font-family: poppins;
+}
+
+.form #submit {
+  padding: 10px 20px;
+  background: #095f9c;
+  color: #fff;
+  border: none;
+  font-family: montserrat;
+}
+
+.form #submit:hover {
+  cursor: pointer;
+  background: #03416d;
+}
+
+.form textarea {
+  border-radius: 2px;
+  margin: 0 10px;
+  padding: 5px;
+  min-width: 400px;
+  font-family: poppins;
+  min-height: 150px;
+}
+
+/* =================================
+    Display Queries
+===================================*/
+
+.output_query_table td {
+  padding: 5px 10px;
+  background: #e6e6e6;
+}
+
+.output_query_table td:hover {
+  background: #d2d2d2;
+  cursor: pointer;
+}
+
+.output_query_table th {
+  background: #095f9c;
+  color: #fff;
+  font-weight: 200;
+  padding: 5px 10px;
+}
+
+.enter_query_table input {
+  min-width: 400px;
+  margin: 5px 10px;
+}

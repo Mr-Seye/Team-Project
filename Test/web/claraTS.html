@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/getQuery.js"></script>
+    <title>Technical Specialist</title>
+</head>
+<body>
+    <div class="header">
+	<form method="get" action="/index.html">
+        <input type="submit" name="submit" id="submit" value="Logout">
+    	</form>
+        <h3>21COB290</h3>
+        <h2>Clara - Technical Specialist</h2>
+    </div>
+
+    <div class="form">
+    <h2>Welcome, Clara.</h2>
+    <h3>Assigned Queries</h3>
+        <table class="output_query_table">
+            <tr>
+                <th>Query No.</th>
+                <th>Description</th>
+                <th>Hardware</th>
+                <th>Software</th>
+                <th>Time</th>
+                <th>Completed</th>
+            </tr>
+            <tr onclick="getQueryData(this,event,0)">
+                <td>325</td>
+                <td>Laptop running very slowly</td>
+                <td>HP Laptop</td>
+                <td>Windows 8</td>
+                <td>Oct 3 2016, 9.00am</td>
+                <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+            </tr>
+            <tr onclick="getQueryData(this,event,0)">
+                <td>326</td>
+                <td>Email may have been hacked when using an external server</td>
+                <td>Asus Laptop</td>
+                <td>Windows 10, Outlook 365</td>
+                <td>Oct 3 2016, 9.15am</td>
+                <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+            </tr>
+            <tr onclick="getQueryData(this,event,0)">
+                <td>328</td>
+                <td>Concerned about the strength of the firewall. In particular wants to keep out illegal messages from Mexico.</td>
+                <td>Network Firewall</td>
+                <td>-</td>
+                <td>Oct 4 2016, 4.15am</td>
+                <td><input type="checkbox" onclick="event.stopPropagation()"></td>
+            </tr> 
+        </table>
+</div>
+
+</body>
+</html>
