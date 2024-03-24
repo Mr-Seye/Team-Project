@@ -1,4 +1,4 @@
-# Team-Web-Programming-Project
+# Web Programming Project
 My local copy of the first and second part of one of my team projects
 
 The task was to create an online ticketing system for a hypothetical company.
